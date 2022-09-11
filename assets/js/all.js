@@ -1,3 +1,5 @@
+"use strict";
+
 $(function () {
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
@@ -6,17 +8,18 @@ $(function () {
     breakpoints: {
       992: {
         slidesPerView: 2.5,
-        spaceBetween: 30,
-      },
+        spaceBetween: 30
+      }
     },
     loop: true,
     autoplay: {
       delay: 3000,
-      disableOnInteraction: false,
+      disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
-      clickable: true,
-    },
+      clickable: true
+    }
   });
 });
+//# sourceMappingURL=all.js.map

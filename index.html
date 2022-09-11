@@ -1,10 +1,200 @@
----
-title: NFT藝術家交易平台 - 首頁
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    NFT藝術家交易平台 - 首頁
+  </title>
+  <link rel="icon" href="assets/images/icon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+  <script src="https://kit.fontawesome.com/140d4559db.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light p-0">
+    <div class="container-sm nav-border">
+      <div class="me-auto">
+        <h1><a class="nav-logo navbar-brand" href="index.html">ART NFT</a></h1>
+      </div>
+      <form class="d-flex p-0 justify-content-end border-left-lg-1">
+        <input class="d-none d-lg-block form-control me-0 border-0 bg-transparent py-3 py-lg-6 ps-5 pe-0" type="search"
+          placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
+        <button class="btn border-0 py-3 py-lg-6 px-5" type="button"><a href="search.html"><i
+              class="fa-solid fa-magnifying-glass fs-6"></i></a></button>
+      </form>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><a href="#">
+          <i class="fa-solid fa-bars fs-5"></i></a>
+      </button>
+      <div class="d-none collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item border-left-lg-1">
+            <a class="nav-link py-3 py-lg-6 px-3 px-lg-7 fw-bold text-center text-lg-start" href="#">探索</a>
+          </li>
+          <li class="nav-item border-left-lg-1">
+            <a class="nav-link py-3 py-lg-6 px-3 px-lg-7 fw-bold text-center text-lg-start" href="#">市值</a>
+          </li>
+          <li class="nav-item border-left-lg-1 text-center">
+            <a class="nav-link py-3 py-lg-6 px-3 px-lg-7" data-bs-toggle="modal" data-bs-target="#wallet" href="#"><i
+                class="fa-solid fa-wallet fs-4"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav-mobile collapse navbar-collapse flex-grow-0 bg-white" id="navbarSupportedContent">
+      <ul class="container-sm d-lg-none navbar-nav mt-2 mb-4 pe-0">
+        <li class="nav-item">
+          <a class="nav-link py-4 fw-bold border-bottom border-1 text-center text-lg-start" href="#">探索</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-4 fw-bold text-center text-lg-start" href="#">市值</a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link fw-bold py-4 btn border border-1 bg-primary text-white" data-bs-toggle="modal"
+            data-bs-target="#wallet" href="#">連結錢包</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Modal wallet -->
+  <div class="modal fade" id="wallet" tabindex="-1" aria-labelledby="wallet" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+      <div class="modal-content">
+        <div class="modal-header position-relative py-4">
+          <h5 class="modal-title position-absolute top-50 start-50 translate-middle fs-5" id="wallet">連結你的錢包</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-4 pb-0">
+          <div class="row">
+            <div class="col-sm-6">
+              <a href="#" class="wallet-item">
+                <div class="card mb-3 active">
+                  <div class="row g-0">
+                    <div class="col-2 d-flex justify-content-end align-items-center">
+                      <img src="assets/images/logo/connect01.png" class="img-fluid rounded-start" alt="wallet-icon">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body">
+                        <h5 class="card-title mb-0 fs-7 font-SquadaOne">MetaMask</h5>
+                      </div>
+                    </div>
+                    <div class="wallet-checked col-2 d-flex justify-content-start align-items-center">
+                      <i class="fa-solid fa-check text-primary"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6">
+              <a href="#" class="wallet-item">
+                <div class="card mb-3 active">
+                  <div class="row g-0">
+                    <div class="col-2 d-flex justify-content-end align-items-center">
+                      <img src="assets/images/logo/connect02.png" class="img-fluid rounded-start" alt="wallet-icon">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body">
+                        <h5 class="card-title mb-0 fs-7 font-SquadaOne">MetaMask</h5>
+                      </div>
+                    </div>
+                    <div class="wallet-checked col-2 d-flex justify-content-start align-items-center">
+                      <i class="fa-solid fa-check text-primary"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6">
+              <a href="#" class="wallet-item">
+                <div class="card mb-3 active">
+                  <div class="row g-0">
+                    <div class="col-2 d-flex justify-content-end align-items-center">
+                      <img src="assets/images/logo/connect03.png" class="img-fluid rounded-start" alt="wallet-icon">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body">
+                        <h5 class="card-title mb-0 fs-7 font-SquadaOne">WalletConnect</h5>
+                      </div>
+                    </div>
+                    <div class="wallet-checked col-2 d-flex justify-content-start align-items-center">
+                      <i class="fa-solid fa-check text-primary"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6">
+              <a href="#" class="wallet-item">
+                <div class="card mb-3 active">
+                  <div class="row g-0">
+                    <div class="col-2 d-flex justify-content-end align-items-center">
+                      <img src="assets/images/logo/connect04.png" class="img-fluid rounded-start" alt="wallet-icon">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body">
+                        <h5 class="card-title mb-0 fs-7 font-SquadaOne">Phantom</h5>
+                      </div>
+                    </div>
+                    <div class="wallet-checked col-2 d-flex justify-content-start align-items-center">
+                      <i class="fa-solid fa-check text-primary"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6">
+              <a href="#" class="wallet-item">
+                <div class="card mb-3 active">
+                  <div class="row g-0">
+                    <div class="col-2 d-flex justify-content-end align-items-center">
+                      <img src="assets/images/logo/connect05.png" class="img-fluid rounded-start" alt="wallet-icon">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body">
+                        <h5 class="card-title mb-0 fs-7 font-SquadaOne">Glow</h5>
+                      </div>
+                    </div>
+                    <div class="wallet-checked col-2 d-flex justify-content-start align-items-center">
+                      <i class="fa-solid fa-check text-primary"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6">
+              <a href="#" class="wallet-item">
+                <div class="card mb-3 active">
+                  <div class="row g-0">
+                    <div class="col-2 d-flex justify-content-end align-items-center">
+                      <img src="assets/images/logo/connect06.png" class="img-fluid rounded-start" alt="wallet-icon">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body">
+                        <h5 class="card-title mb-0 fs-7 font-SquadaOne">Fortmatic</h5>
+                      </div>
+                    </div>
+                    <div class="wallet-checked col-2 d-flex justify-content-start align-items-center">
+                      <i class="fa-solid fa-check text-primary"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer d-flex justify-content-center border-0 pb-4">
+          <button type="button" class="btn border border-1 bg-primary text-white fs-6 pb-2 px-7">連結錢包</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 <section class="banner my-6 nav-h">
     <div class="container p-0">
         <div class="card">
@@ -468,3 +658,18 @@ current: index
         </div>
     </div>
 </section>
+
+    <footer class="footer pt-5 pb-4 text-center border-top border-1 position-relative">
+      <p class="footer-border">© ART NFT. All Rights Reserved</p>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+      async></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
