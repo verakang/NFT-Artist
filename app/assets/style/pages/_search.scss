@@ -1,0 +1,66 @@
+.nav-h {
+    padding-top: 106px;
+
+    @include pad {
+        padding-top: 40px;
+    }
+}
+
+.artwork-item {
+    .card::after {
+        content: "";
+        width: calc(100% - 48px);
+        height: calc(100% - 48px);
+        background-color: rgba(0, 0, 0, 0);
+        position: absolute;
+        top: 24px;
+        left: 24px;
+    }
+
+    &:hover {
+        .card::after {
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .artwork-border {
+            border: 1px solid white;
+            z-index: 6;
+        }
+
+        .card-text {
+            color: white;
+            z-index: 5;
+        }
+
+        .artwork-btn {
+            opacity: 1;
+        }
+    }
+
+    .artwork-border {
+        transition: 0.3s;
+        border: 1px solid transparent;
+        margin: 40px;
+    }
+
+    .card-title {
+        @include pad {
+            border-bottom: 0 !important;
+        }
+    }
+
+    .card-text {
+        transition: 0.3s;
+        color: transparent;
+    }
+
+    .artwork-btn {
+        transition: 0.1s;
+        opacity: 0;
+        position: absolute;
+        bottom: 56px;
+        right: 56px;
+        z-index: 10;
+    }
+}
