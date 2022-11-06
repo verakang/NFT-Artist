@@ -21,5 +21,11 @@ $(function () {
       clickable: true
     }
   });
+  var $grid = $('.grid').masonry({// options...
+  }); // layout Masonry after each image loads
+
+  $grid.imagesLoaded().progress(function () {
+    $grid.masonry('layout');
+  });
 });
 //# sourceMappingURL=all.js.map
